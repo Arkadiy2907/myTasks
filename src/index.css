@@ -19,7 +19,7 @@ button {
   font-size: 1em;
   font-weight: 500;
   font-family: inherit;
-  background-color: #1a1a1a;
+  background-color: rgb(219, 212, 212);
   cursor: pointer;
   transition: border-color 0.5s;
 }

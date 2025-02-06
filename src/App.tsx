@@ -53,9 +53,10 @@ const ParamEditor: React.FC<Props> = ({ params, model, onModelChange }) => {
     <div>
       {params &&
         params.map((param) => (
-          <div key={param.id}>
-            <label>{param.name}</label>
+          <div style={{ margin: '5px' }} key={param.id}>
+            <label>{param.name}</label>{' '}
             <input
+              style={{ margin: '5px' }}
               type="text"
               value={paramValues[param.id] || ''}
               onChange={(e) => handleParamChange(param.id, e.target.value)}
