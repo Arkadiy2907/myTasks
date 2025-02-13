@@ -25,9 +25,18 @@ class ErrorBoundary extends React.Component<
     console.error('Ошибка:', error, errorInfo);
   }
 
+  handleReload = () => {
+    window.location.reload();
+  };
+
   render() {
     if (this.state.hasError) {
-      return <h1>Что-то пошло не так.</h1>;
+      return (
+        <div>
+          <h1>Упсс ... Что-то пошло не так!</h1>
+          <button onClick={this.handleReload}>Перезагрузить страницу</button>
+        </div>
+      );
     }
     return this.props.children;
   }
